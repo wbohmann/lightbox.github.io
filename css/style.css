@@ -1,0 +1,60 @@
+img{
+    max-width: 100%; /*makes image responsive */
+    max-height:50vh /*sets the max height of images in browser */
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap:1em;
+}
+
+/* lightbox markup */
+
+.lightbox{
+    display: none;
+    /* overlay for the screen */
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(2, 21, 60, 0.9); /*creats translucent bg*/
+    z-index:999;
+    padding:1em;
+}
+
+/* to unhide the lightbox we'll use the target psuedo element */
+.lightbox:target{
+    display:block;
+}
+
+.imageone{
+    background-image: url("../images/leaves.JPG");
+}
+.imagetwo{
+    background-image: url("../images/pinecone.JPG");
+}
+.imagethree{
+    background-image: url("../images/school.JPG");
+}
+
+.lightbox > span{
+    display:block;
+    max-width:80%;
+    height:80%;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: contain;
+    margin: 0 auto; /*center the image*/
+
+
+}
+
+figcaption{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+}
